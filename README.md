@@ -1,6 +1,6 @@
 # KBBI (Kamus Besar Bahasa Indonesia) - Data Lengkap
 
-Data lengkap **Kamus Besar Bahasa Indonesia (KBBI)** Edisi V yang diekstrak dari aplikasi resmi KBBI Kemendikdasmen versi 6.0.2.
+Data lengkap **Kamus Besar Bahasa Indonesia (KBBI)** Edisi VI yang diekstrak dari aplikasi resmi KBBI Kemendikdasmen versi 6.0.2.
 
 **194.692 entri** dengan definisi, contoh, kata turunan, gabungan kata, peribahasa, dan lainnya.
 
