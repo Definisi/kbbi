@@ -218,4 +218,4 @@ Script ekstraksi dalam repository ini disediakan apa adanya (*as-is*) untuk kepe
 - **KBBI**: Badan Pengembangan dan Pembinaan Bahasa, Kemendikdasmen RI
 - **Aplikasi KBBI**: [yuku](https://github.com/yukuku/kbbi4)
 - **Decompiler**: [jadx](https://github.com/skylot/jadx)
-- **Salsa20**: [@stablelib/salsa20](https://www.npmjs.com/package/@stablelib/salsa20)
+- **Salsa20**: [@stablelib/salsa20](https://www.npmjs.com/package/@stablelib/salsa20) 
