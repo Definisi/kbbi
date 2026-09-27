@@ -1,8 +1,22 @@
 # KBBI (Kamus Besar Bahasa Indonesia) - Data Lengkap
 
-Data lengkap **Kamus Besar Bahasa Indonesia (KBBI)** Edisi VI yang diekstrak dari aplikasi resmi KBBI Kemendikdasmen versi 6.0.2.
+Data lengkap **Kamus Besar Bahasa Indonesia (KBBI)** Edisi VI yang diekstrak dari aplikasi resmi KBBI Kemendikdasmen versi 6.1.0.
 
 **194.692 entri** dengan definisi, contoh, kata turunan, gabungan kata, peribahasa, dan lainnya.
+
+> Mau lihat data versi sebelumnya (6.0.2)? Cek branch [`v6.0.2`](https://github.com/Definisi/kbbi/tree/v6.0.2).
+
+## Perubahan dari Versi 6.0.2
+
+- Jumlah entri sama (194.692), tidak ada kata yang ditambah atau dihapus.
+- Isi makna, contoh, kata turunan, gabungan kata, dan peribahasa tidak berubah.
+- Ada label baru `sing` (singkatan) dengan code `34`. Sebagian besar label `kp` (kependekan) sekarang dipecah jadi `sing`.
+  - Versi 6.0.2: 3.723 label `kp`
+  - Versi 6.1.0: 285 label `kp` + 3.438 label `sing`
+- Total 3.104 entri berubah labelnya, contoh `AABI`:
+  - 6.0.2: `[n]  {Hub}  kp  Anemer Aspal dan Beton Indonesia`
+  - 6.1.0: `[n]  {Hub}  sing  Anemer Aspal dan Beton Indonesia`
+- `extract_v6.js` sudah diupdate untuk membaca code `34`. Extractor lama akan berhenti membaca entri saat ketemu code ini, jadi makna dari 3.104 entri tersebut akan hilang.
 
 ## Statistik Data
 
@@ -83,7 +97,7 @@ File `kbbi_v6_data.json` berisi array of objects dengan struktur:
 
 ## Cara Ekstraksi (Teknis)
 
-Data ini diekstrak dari APK resmi KBBI Kemendikdasmen v6.0.2 melalui proses reverse engineering berikut:
+Data ini diekstrak dari APK resmi KBBI Kemendikdasmen v6.1.0 melalui proses reverse engineering berikut:
 
 ### 1. Ekstrak APK
 
@@ -171,6 +185,7 @@ Setiap entri adalah sequence byte codes:
 | 31 | - | Label: kp (kepanjangan) |
 | 32 | - | Label: akr (akronim) |
 | 33 | - | Label: ukp (ungkapan) |
+| 34 | - | Label: sing (singkatan) |
 | 40 | number | Rujukan (index ke word list) |
 | 41 | number | Rujukan panah |
 | 42 | string | Teks bold |

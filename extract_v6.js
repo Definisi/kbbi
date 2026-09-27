@@ -42,7 +42,7 @@ const codeArg = new Array(256).fill(0);
 [0,1,2,3,4,5].forEach(c => codeArg[c] = 3);
 [10,11,12,13,14,15].forEach(c => codeArg[c] = 1);
 [20,21,22,23,24,25].forEach(c => codeArg[c] = 3);
-[30,31,32,33].forEach(c => codeArg[c] = 1);
+[30,31,32,33,34].forEach(c => codeArg[c] = 1);
 codeArg[40] = 2; codeArg[41] = 2; codeArg[42] = 3; codeArg[50] = 3;
 [60,61,62,63].forEach(c => codeArg[c] = 3);
 codeArg[74] = 3; codeArg[255] = 1;
@@ -107,6 +107,7 @@ function parseEntry(buf, offset, words) {
       case 31: currentMakna += "kp "; break;
       case 32: currentMakna += "akr "; break;
       case 33: currentMakna += "ukp "; break;
+      case 34: currentMakna += "sing "; break;
       case 42: case 60: case 61: case 62: case 63: case 74:
         currentMakna += str; break;
       case 50: entry.contoh.push(str); break;
